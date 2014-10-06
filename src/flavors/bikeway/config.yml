@@ -54,125 +54,97 @@ place_types:
     label: _(Favorite Destination)
     rules:
       - condition: '"{{location_type}}" === "favorite" && {{map.zoom}} < 13 && {{layer.focused}} === false'
-        # Display landmarks as circles (vectors) when zoomed out
-
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
+        icon:
+          iconUrl: /static/css/images/marker-01.png
+          iconSize: [9, 9]
+          iconAnchor: [5, 5]
 
       - condition: '"{{location_type}}" === "favorite" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
-          iconAnchor: [9, 9]
+          iconUrl: /static/css/images/marker-01.png
+          iconSize: [15, 15]
+          iconAnchor: [8, 8]
 
       - condition: '"{{location_type}}" === "favorite" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/marker-08.png
           shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
+          iconSize: [44, 70]
           shadowSize: [41, 41]
-          iconAnchor: [12, 41]
+          iconAnchor: [22, 70]
 
   goodroute:
     label: _(Good Bike Route)
     rules:
       - condition: '"{{location_type}}" === "goodroute" && {{map.zoom}} < 13 && {{layer.focused}} === false'
-        # Display landmarks as circles (vectors) when zoomed out
-
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
+        icon:
+          iconUrl: /static/css/images/marker-02.png
+          iconSize: [9, 9]
+          iconAnchor: [5, 5]
 
       - condition: '"{{location_type}}" === "goodroute" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
-        # Display landmarks as icons when zoomed in
-
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
-          iconAnchor: [9, 9]
+          iconUrl: /static/css/images/marker-02.png
+          iconSize: [15, 15]
+          iconAnchor: [8, 8]
 
       - condition: '"{{location_type}}" === "goodroute" && {{layer.focused}} === true'
-        # Display landmarks as icons when zoomed in
-
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/marker-05.png
           shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
+          iconSize: [44, 70]
           shadowSize: [41, 41]
-          iconAnchor: [12, 41]
+          iconAnchor: [22, 70]
 
   difficultxing:
     label: _(Difficult Crossing)
     rules:
       - condition: '"{{location_type}}" === "difficultxing" && {{map.zoom}} < 13 && {{layer.focused}} === false'
-        # Display landmarks as circles (vectors) when zoomed out
-
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
+        icon:
+          iconUrl: /static/css/images/marker-03.png
+          iconSize: [9, 9]
+          iconAnchor: [5, 5]
 
       - condition: '"{{location_type}}" === "difficultxing" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
-        # Display landmarks as icons when zoomed in
-
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
-          iconAnchor: [9, 9]
+          iconUrl: /static/css/images/marker-03.png
+          iconSize: [15, 15]
+          iconAnchor: [8, 8]
 
       - condition: '"{{location_type}}" === "difficultxing" && {{layer.focused}} === true'
-        # Display landmarks as icons when zoomed in
-
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/marker-06.png
           shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
+          iconSize: [44, 70]
           shadowSize: [41, 41]
-          iconAnchor: [12, 41]
+          iconAnchor: [22, 70]
 
   conflict:
     label: _(Conflict Area)
     rules:
       - condition: '"{{location_type}}" === "conflict" && {{map.zoom}} < 13 && {{layer.focused}} === false'
-        # Display landmarks as circles (vectors) when zoomed out
-
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
+        icon:
+          iconUrl: /static/css/images/marker-04.png
+          iconSize: [9, 9]
+          iconAnchor: [5, 5]
 
       - condition: '"{{location_type}}" === "conflict" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
-        # Display landmarks as icons when zoomed in
-
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
-          iconAnchor: [9, 9]
+          iconUrl: /static/css/images/marker-04.png
+          iconSize: [15, 15]
+          iconAnchor: [8, 8]
 
       - condition: '"{{location_type}}" === "conflict" && {{layer.focused}} === true'
-        # Display landmarks as icons when zoomed in
-
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/marker-07.png
           shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
+          iconSize: [44, 70]
           shadowSize: [41, 41]
-          iconAnchor: [12, 41]
+          iconAnchor: [22, 70]
 
 
 
