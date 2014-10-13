@@ -258,6 +258,13 @@ place:
       attrs:
         - key: size
           value: 30
+    - prompt: _(Your municipality (optional and will NOT be shown on the map))
+      type: text
+      name: private-municipality
+      sticky: true
+      attrs:
+        - key: size
+          value: 30
     - prompt: _(Your age (optional and will NOT be shown on the map))
       type: text
       name: private-age
