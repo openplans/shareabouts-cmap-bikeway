@@ -55,15 +55,15 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "favorite" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/marker-01.png
-          iconSize: [9, 9]
-          iconAnchor: [5, 5]
+          iconUrl: /static/css/images/dot-ff78be.png
+          iconSize: [15, 15]
+          iconAnchor: [8, 8]
 
       - condition: '"{{location_type}}" === "favorite" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/marker-01.png
+          iconUrl: /static/css/images/dot-ff78be.png
           iconSize: [15, 15]
           iconAnchor: [8, 8]
 
@@ -71,80 +71,72 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/marker-08.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [44, 70]
-          shadowSize: [41, 41]
-          iconAnchor: [22, 70]
+          iconUrl: /static/css/images/fav-route.png
+          iconSize: [75, 90]
+          iconAnchor: [38, 90]
 
   goodroute:
     label: _(Good Bike Route)
     rules:
       - condition: '"{{location_type}}" === "goodroute" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/marker-02.png
-          iconSize: [9, 9]
-          iconAnchor: [5, 5]
+          iconUrl: /static/css/images/dot-c4ed52.png
+          iconSize: [15, 15]
+          iconAnchor: [8, 8]
 
       - condition: '"{{location_type}}" === "goodroute" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/marker-02.png
+          iconUrl: /static/css/images/dot-c4ed52.png
           iconSize: [15, 15]
           iconAnchor: [8, 8]
 
       - condition: '"{{location_type}}" === "goodroute" && {{layer.focused}} === true'
         icon:
-          iconUrl: /static/css/images/marker-05.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [44, 70]
-          shadowSize: [41, 41]
-          iconAnchor: [22, 70]
+          iconUrl: /static/css/images/thumbs-up.png
+          iconSize: [75, 90]
+          iconAnchor: [38, 90]
 
   difficultxing:
     label: _(Difficult Crossing)
     rules:
       - condition: '"{{location_type}}" === "difficultxing" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/marker-03.png
-          iconSize: [9, 9]
-          iconAnchor: [5, 5]
+          iconUrl: /static/css/images/dot-ffd614.png
+          iconSize: [15, 15]
+          iconAnchor: [8, 8]
 
       - condition: '"{{location_type}}" === "difficultxing" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/marker-03.png
+          iconUrl: /static/css/images/dot-ffd614.png
           iconSize: [15, 15]
           iconAnchor: [8, 8]
 
       - condition: '"{{location_type}}" === "difficultxing" && {{layer.focused}} === true'
         icon:
-          iconUrl: /static/css/images/marker-06.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [44, 70]
-          shadowSize: [41, 41]
-          iconAnchor: [22, 70]
+          iconUrl: /static/css/images/bike-crossing.png
+          iconSize: [75, 90]
+          iconAnchor: [38, 90]
 
   conflict:
     label: _(Conflict Area)
     rules:
       - condition: '"{{location_type}}" === "conflict" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/marker-04.png
-          iconSize: [9, 9]
-          iconAnchor: [5, 5]
+          iconUrl: /static/css/images/dot-fc9229.png
+          iconSize: [15, 15]
+          iconAnchor: [8, 8]
 
       - condition: '"{{location_type}}" === "conflict" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/marker-04.png
+          iconUrl: /static/css/images/dot-fc9229.png
           iconSize: [15, 15]
           iconAnchor: [8, 8]
 
       - condition: '"{{location_type}}" === "conflict" && {{layer.focused}} === true'
         icon:
-          iconUrl: /static/css/images/marker-07.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [44, 70]
-          shadowSize: [41, 41]
-          iconAnchor: [22, 70]
+          iconUrl: /static/css/images/bike-conflict.png
+          iconSize: [75, 90]
+          iconAnchor: [38, 90]
 
 
 
