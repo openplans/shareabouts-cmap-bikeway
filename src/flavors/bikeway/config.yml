@@ -32,7 +32,7 @@ map:
       lat: 42.11030
       lng: -88.21366
     zoom: 12
-    minZoom: 10
+    minZoom: 12
     maxZoom: 17
   layers:
     - url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
@@ -144,9 +144,8 @@ place:
   # Labels for the buttons that toggle the map and list views
   show_list_button_label: _(List All Places)
   show_map_button_label: _(Show the Map)
-  action_text: _(added)
+  action_text: _(identified)
   title: _(What would you like to share?)
-  action_text: _(suggested)
   anonymous_name: _(Someone)
   submit_button_label: _(Submit)
 
@@ -171,15 +170,13 @@ place:
         - key: required
     - prompt: _(Location)
       type: text
-      name: location
+      name: location-name
       optional: false
       attrs:
         - key: placeholder
           value: _(Location)
         - key: size
           value: 30
-        - key: hidden
-          value: true
     - prompt: _(Street Name)
       type: text
       name: streetname

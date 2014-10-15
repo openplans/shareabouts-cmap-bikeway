@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% block site-title %}
-<a href="/">{{ config.app.name }}</a>
+<a href="http://www.cmap.illinois.gov/" target="_blank"><img id="site-logo" src="/static/css/images/CMAP.jpg" width="60" height="60">CMAP Bikeway Feasibility Study</a>
 {% endblock %}
 
 {% block meta %}
@@ -42,6 +42,12 @@
   This will place content at the top of the side bar
  -->
 {% block sidebar %}
+<ul class="legend">
+  <li class="clearfix"><img src="/static/css/images/fav-route.png/" width="25" height="30"> Favorite Destination</li>
+  <li class="clearfix"><img src="/static/css/images/thumbs-up.png" width="25" height="30"> Good Bike Route</li>
+  <li class="clearfix"><img src="/static/css/images/bike-crossing.png" width="25" height="30"> Difficult Crossing</li>
+  <li class="clearfix"><img src="/static/css/images/bike-conflict.png" width="25" height="30"> Conflict Area</li>
+</ul>
 {% endblock %}
 
 <!--
@@ -60,8 +66,8 @@
 
   function hideform(){
       //turn off all fields that should not initially be visible, before a location type is chosen
-      $("label[for='place-location']").hide();
-      $('#place-location').hide();
+      $("label[for='place-location-name']").hide();
+      $('#place-location-name').hide();
       $("label[for='place-streetname']").hide();
       $('#place-streetname').hide();
       $("label[for='place-crossing_type']").hide();
@@ -82,8 +88,8 @@
       switch(val) {
           case "favorite":
               hideform();
-              $("label[for='place-location']").show();
-              $('#place-location').show();
+              $("label[for='place-location-name']").show();
+              $('#place-location-name').show();
               $("label[for='place-description']").show();
               $('#place-description').show();
               break;
@@ -96,8 +102,8 @@
               break;
           case "difficultxing":
               hideform();
-              $("label[for='place-location']").show();
-              $('#place-location').show();
+              $("label[for='place-location-name']").show();
+              $('#place-location-name').show();
               $("label[for='place-crossing_type']").show();
               $('#place-crossing_type').show();
               $("label[for='place-lanes']").show();
@@ -107,8 +113,8 @@
               break;
           case "conflict":
               hideform();
-              $("label[for='place-location']").show();
-              $('#place-location').show();
+              $("label[for='place-location-name']").show();
+              $('#place-location-name').show();
               $("label[for='place-description']").show();
               $('#place-description').show();
               break;
