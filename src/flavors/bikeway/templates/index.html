@@ -44,9 +44,9 @@
 {% block sidebar %}
 <ul class="legend">
   <li class="clearfix"><img src="/static/css/images/fav-route.png/" width="25" height="30"> Favorite Destination</li>
-  <li class="clearfix"><img src="/static/css/images/thumbs-up.png" width="25" height="30"> Good Bike Route</li>
+  <li class="clearfix"><img src="/static/css/images/thumbs-up.png" width="25" height="30"> Desirable Bike Route</li>
   <li class="clearfix"><img src="/static/css/images/bike-crossing.png" width="25" height="30"> Difficult Crossing</li>
-  <li class="clearfix"><img src="/static/css/images/bike-conflict.png" width="25" height="30"> Conflict Area</li>
+  <li class="clearfix"><img src="/static/css/images/thumbs-down.png" width="25" height="30"> Undesirable Bike Route</li>
 </ul>
 {% endblock %}
 
@@ -76,10 +76,14 @@
       $('#place-lanes').hide();
       $("label[for='place-description']").hide();
       $('#place-description').hide();
+      $("label[for='place-my_image']").hide();
+      $('.fileinput-container').hide();
 
   };
     $(Shareabouts).on('panelshow', function(evt, app, path) {
       hideform();
+      var firstOptionalItem = $('#place-private-zip').parent('p');
+      $( "<h5>Thanks!</h5> <p>The following questions are <strong>optional</strong> and will help us to assess whether these maps are reaching the full diversity of our community:</p>" ).insertBefore(firstOptionalItem);
     });
 
     $(document).on('change', '[name="location_type"]', function(evt) {
@@ -92,6 +96,8 @@
               $('#place-location-name').show();
               $("label[for='place-description']").show();
               $('#place-description').show();
+              $("label[for='place-my_image']").show();
+              $('.fileinput-container').show();
               break;
           case "goodroute":
               hideform();
@@ -99,6 +105,8 @@
               $('#place-streetname').show();
               $("label[for='place-description']").show();
               $('#place-description').show();
+              $("label[for='place-my_image']").show();
+              $('.fileinput-container').show();
               break;
           case "difficultxing":
               hideform();
@@ -110,20 +118,22 @@
               $('#place-lanes').show();
               $("label[for='place-description']").show();
               $('#place-description').show();
+              $("label[for='place-my_image']").show();
+              $('.fileinput-container').show();
               break;
-          case "conflict":
+          case "badroute":
               hideform();
-              $("label[for='place-location-name']").show();
-              $('#place-location-name').show();
+              $("label[for='place-streetname']").show();
+              $('#place-streetname').show();
               $("label[for='place-description']").show();
               $('#place-description').show();
+              $("label[for='place-my_image']").show();
+              $('.fileinput-container').show();
               break;
           default:
               console.log("none")
       }
-    });
-
- 
+    }); 
 
 
     var originalOnMarkerClick = Shareabouts.LayerView.prototype.onMarkerClick;

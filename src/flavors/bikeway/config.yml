@@ -68,7 +68,7 @@ place_types:
           iconAnchor: [38, 90]
 
   goodroute:
-    label: _(Good Bike Route)
+    label: _(Desirable Bike Route)
     rules:
       - condition: '"{{location_type}}" === "goodroute" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         icon:
@@ -109,24 +109,24 @@ place_types:
           iconSize: [75, 90]
           iconAnchor: [38, 90]
 
-  conflict:
-    label: _(Conflict Area)
+  badroute:
+    label: _(Undesirable Bike Route)
     rules:
-      - condition: '"{{location_type}}" === "conflict" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+      - condition: '"{{location_type}}" === "badroute" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/dot-fc9229.png
+          iconUrl: /static/css/images/dot-fa0041.png
           iconSize: [15, 15]
           iconAnchor: [8, 8]
 
-      - condition: '"{{location_type}}" === "conflict" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+      - condition: '"{{location_type}}" === "badroute" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
         icon:
-          iconUrl: /static/css/images/dot-fc9229.png
+          iconUrl: /static/css/images/dot-fa0041.png
           iconSize: [15, 15]
           iconAnchor: [8, 8]
 
-      - condition: '"{{location_type}}" === "conflict" && {{layer.focused}} === true'
+      - condition: '"{{location_type}}" === "badroute" && {{layer.focused}} === true'
         icon:
-          iconUrl: /static/css/images/bike-conflict.png
+          iconUrl: /static/css/images/thumbs-down.png
           iconSize: [75, 90]
           iconAnchor: [38, 90]
 
@@ -159,12 +159,12 @@ place:
           value: ''
         - label: _(Favorite Destination)
           value: favorite
-        - label: _(Good Bike Route)
+        - label: _(Desirable Bike Route)
           value: goodroute
         - label: _(Difficult Crossing)
           value: difficultxing
-        - label: _(Conflict Area)
-          value: conflict
+        - label: _(Undesirable Bike Route)
+          value: badroute
       name: location_type
       attrs:
         - key: required
@@ -233,35 +233,36 @@ place:
         - key: size
           value: 30
         - key: required
-    - prompt: _(Your Email (optional and will NOT be shown on the map))
+    - prompt: _(Your Email)
       type: text
       name: private-submitter_email
+      optional: true
       sticky: true
       attrs:
         - key: size
           value: 30
-    - prompt: _(Your zip code (optional and will NOT be shown on the map))
+    - prompt: _(Your ZIP Code)
       type: text
       name: private-zip
       sticky: true
       attrs:
         - key: size
           value: 30
-    - prompt: _(Your municipality (optional and will NOT be shown on the map))
+    - prompt: _(Your Municipality)
       type: text
       name: private-municipality
       sticky: true
       attrs:
         - key: size
           value: 30
-    - prompt: _(Your age (optional and will NOT be shown on the map))
+    - prompt: _(Your Age)
       type: text
       name: private-age
       sticky: true
       attrs:
         - key: size
           value: 30
-    - prompt: _(Your gender (optional and will NOT be shown on the map))
+    - prompt: _(Your Gender)
       type: text
       name: private-gender
       sticky: true
